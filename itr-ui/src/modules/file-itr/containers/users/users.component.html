@@ -1,0 +1,31 @@
+
+<div class="body">
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-left">Name</th>
+                <th class="text-left">Pan Number</th>
+                <th class="text-left">Mobile Number</th>
+                <th class="text-left">Email</th>
+                <!-- <th class="text-left">Role</th> -->
+                <th></th>
+                <!-- <th></th> -->
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            <tr *ngFor="let users of userList | paginate: config">
+                <td class="text-left">{{users.userName}}</td>
+                <td class="text-left">{{users.pancard}}</td>
+                <td class="text-left">{{users.mobileNumber}}</td>
+                <td class="text-left">{{users.email}}</td>
+                <!-- <td class="text-left">{{users.role}}</td> -->
+                <td class="text-left"><button [disabled]="users.itrStatusFlag"
+                     class="btn btn-sm btn-outline-info button" (click)="redirectToFileUpload()">Upload Form16</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="has-text-centered page">
+    <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+</div>

@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container bootstrap snippets bootdey">
+  <div class="row">
+    <div class="col-lg-2 col-sm-6">
+      <div class="circle-tile">
+        <a>
+          <div class="circle-tile-heading dark-blue">
+            <i class="fa fa-users fa-fw fa-3x"></i>
+          </div>
+        </a>
+        <div class="circle-tile-content dark-blue">
+          <div class="circle-tile-description"><a href="/file-itr/users" class="text-faded">Total Clients </a></div>
+          <div class="circle-tile-number text-faded">{{this.totalClients}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-sm-6">
+      <div class="circle-tile">
+        <a>
+          <div class="circle-tile-heading green">
+            <i class="fa fa-file fa-fw fa-3x"></i>
+          </div>
+        </a>
+        <div class="circle-tile-content green">
+          <div class="circle-tile-description"><a [routerLink]="[]" (click)="redirectToItr('Complete')" class="text-faded">Completed Itr files</a></div>
+          <div class="circle-tile-number text-faded">{{this.completedFiles}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-sm-6">
+      <div class="circle-tile">
+        <a>
+          <div class="circle-tile-heading orange">
+            <i class="fa fa-file-o fa-fw fa-3x"></i>
+          </div>
+        </a>
+        <div class="circle-tile-content orange">
+          <div class="circle-tile-description"><a [routerLink]="[]" (click)="redirectToItr('New')" class="text-faded">New Itr files</a></div>
+          <div class="circle-tile-number text-faded">{{this.newFiles}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
